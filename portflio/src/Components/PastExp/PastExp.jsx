@@ -1,8 +1,8 @@
 import "../PastExp/PastExp.css";
-import mongo_db from "../Assets/mongo.png";
-import react_logo from "../Assets/react.png";
-import node_logo from "../Assets/node.png";
-import express_logo from "../Assets/express-js.png";
+// import mongo_db from "../Assets/mongo.png";
+// import react_logo from "../Assets/react.png";
+// import node_logo from "../Assets/node.png";
+// import express_logo from "../Assets/express-js.png";
 
 function PastExp() {
   return (
@@ -28,10 +28,10 @@ function PastExp() {
       </div>
 
       <div className="tech">
-        <img src={mongo_db} alt="MongoDB" />
-        <img src={express_logo} alt="Express.js" />
-        <img src={react_logo} alt="React.js" />
-        <img src={node_logo} alt="Node.js" />
+        <img src="https://res.cloudinary.com/dp2h1zqb4/image/upload/v1780601194/mongodb_wsxpi8.svg" alt="MongoDB" />
+        <img src="https://res.cloudinary.com/dp2h1zqb4/image/upload/v1780601124/express-js_ztuefl.png" alt="Express.js" />
+        <img src="https://res.cloudinary.com/dp2h1zqb4/image/upload/v1780600787/rect_tdu1rb.svg" alt="React.js" />
+        <img src="https://res.cloudinary.com/dp2h1zqb4/image/upload/v1780600952/nde_mmvihg.jpg" alt="Node.js" />
       </div>
     </div>
   );
