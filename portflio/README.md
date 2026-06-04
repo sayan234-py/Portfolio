@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# 🌐 Sayan Nandi — Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A personal portfolio website built with **React** and **Vite**, featuring a clean **morphic glass UI** design with smooth animations, dark theme, and fully responsive layout.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- **Glassmorphism UI** — frosted glass cards, ambient orbs, and layered depth
+- **Animated Hero** — typed.js role switcher, spinning gradient image ring, live badge
+- **Responsive Design** — mobile-first, works across all screen sizes
+- **React Router** — multi-page SPA with active link detection
+- **Scroll Animations** — intersection observer–triggered card reveals on the About page
+- **Projects Showcase** — card grid with tech tags, live & code links
+- **Contact Section** — structured info panel + styled contact form
+- **Custom Design System** — CSS variables for glass, blur, glow, and color tokens
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+| Layer      | Technology                        |
+|------------|-----------------------------------|
+| Frontend   | React 19, React Router DOM v7     |
+| Build Tool | Vite 8                            |
+| Styling    | Pure CSS (no UI library)          |
+| Fonts      | Space Grotesk · DM Sans · JetBrains Mono |
+| Animation  | CSS keyframes + Typed.js          |
+| Deployment | Render                            |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📁 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+portflio/
+├── index.html                  # Vite entry HTML
+├── vite.config.js              # Vite config with React plugin
+├── package.json
+└── src/
+    ├── App.jsx                 # Routes setup
+    ├── index.jsx               # React DOM entry
+    ├── index.css               # Global design system (CSS vars, glass utilities)
+    ├── pages/
+    │   ├── Home.jsx            # Hero + experience section
+    │   ├── About.jsx           # Timeline cards + skills
+    │   ├── Projects.jsx        # Project grid cards
+    │   ├── Contact.jsx         # Info panel + contact form
+    │   └── css/
+    │       ├── Home.css
+    │       ├── About.css
+    │       ├── Project.css
+    │       └── Contact.css
+    └── Components/
+        ├── Navbar/             # Sticky glass navbar
+        ├── PastExp/            # Internship experience card
+        ├── Footer/             # Footer with links
+        └── Assets/             # Images and logos
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Getting Started
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Node.js v18+ (v20 recommended)
+- npm
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Clone the repository
+git clone https://github.com/sayan234-py/Portfolio.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Navigate into the project folder
+cd Portfolio/portflio
 
-## Learn More
+# Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Start the development server
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### Code Splitting
+### Build for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run build
+```
 
-### Analyzing the Bundle Size
+Output is generated in the `dist/` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📄 Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Page       | Route       | Description                              |
+|------------|-------------|------------------------------------------|
+| Home       | `/`         | Hero section with typed animation + internship experience |
+| About      | `/about`    | Bio, education, skills, and interests    |
+| Projects   | `/projects` | Showcase of MERN stack projects          |
+| Contact    | `/contact`  | Contact info + message form              |
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📬 Contact
 
-### Deployment
+**Sayan Nandi**
+- 📧 [nsayan520@gmail.com](mailto:nsayan520@gmail.com)
+- 💼 [LinkedIn](https://linkedin.com/in/sayan-nandi-152581359)
+- 🐙 [GitHub](https://github.com/sayan234-py)
+- 📍 Durgapur, West Bengal, India
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+> Built with 💙 by Sayan Nandi — BCA Student & MERN Stack Developer
