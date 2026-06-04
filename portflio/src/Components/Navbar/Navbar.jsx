@@ -1,21 +1,32 @@
-import { Link } from "react-router-dom";
-import './Navbar.css'
+import { Link, useLocation } from "react-router-dom";
+import './Navbar.css';
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
     <nav>
-        <div className="logo">
-            <h3>Sayan'S Portfolio</h3>
-        </div>
+      <div className="logo">
+        <h3>Sayan Nandi</h3>
+      </div>
       <div className="link">
-        <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/contact">Contact</Link>
+        {[
+          { to: '/', label: 'Home' },
+          { to: '/about', label: 'About' },
+          { to: '/projects', label: 'Projects' },
+          { to: '/contact', label: 'Contact' },
+        ].map(({ to, label }) => (
+          <Link
+            key={to}
+            to={to}
+            className={location.pathname === to ? 'active' : ''}
+          >
+            {label}
+          </Link>
+        ))}
       </div>
     </nav>
   );
 };
 
 export default Navbar;
-
