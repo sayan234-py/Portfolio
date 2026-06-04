@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Typed from "typed.js";
 import "./css/Home.css";
-import bgImg from "../Components/Assets/bgs.png";
+// import bgImg from "../Components/Assets/bgs.png";
 import PastExp from "../Components/PastExp/PastExp";
 import Footer from "../Components/Footer/Footer";
 
@@ -64,7 +64,7 @@ function Home() {
           <div className="image-frame">
             <div className="image-ring" />
             <div className="image-glow" />
-            <img src={bgImg} alt="Sayan profile" />
+            <img src="https://res.cloudinary.com/dp2h1zqb4/image/upload/v1780598775/image_whwebg.png" alt="Sayan profile" />
           </div>
         </div>
       </section>
