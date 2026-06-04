@@ -1,74 +1,96 @@
 import "./css/Project.css";
-import { Link } from 'react-router-dom';
+
+const projects = [
+  {
+    id: "01",
+    title: "E-Commerce Website",
+    desc: "A responsive course-selling e-commerce frontend built with React, featuring dynamic product listings, cart management, and smooth navigation.",
+    tech: ["React", "CSS", "REST API"],
+    live: "https://e-commerce-bd1y.onrender.com/",
+    code: null,
+  },
+  {
+    id: "02",
+    title: "Portfolio Website",
+    desc: "This personal portfolio — crafted with React and custom CSS — showcasing projects, skills, and a morphic glass UI design.",
+    tech: ["React", "CSS3", "Animations"],
+    live: "#",
+    code: "https://github.com/sayan234-py/Portfolio",
+  },
+  {
+    id: "03",
+    title: "Nandi Fashions",
+    desc: "A full-stack MERN e-commerce platform with product management, user auth, and a complete shopping flow deployed on Render.",
+    tech: ["MongoDB", "Express", "React", "Node.js"],
+    live: null,
+    code: "https://github.com/sayan234-py",
+  },
+  {
+    id: "04",
+    title: "MERN Weather App",
+    desc: "Full-stack weather app with a dark morphic UI, WeatherAPI.com integration, location search, and real-time forecast data.",
+    tech: ["MERN", "WeatherAPI", "CSS"],
+    live: null,
+    code: null,
+  },
+  {
+    id: "05",
+    title: "Hotel Management System",
+    desc: "Academic project for managing reservations, billing, and customer records with a structured backend approach.",
+    tech: ["React", "MongoDB", "Express"],
+    live: null,
+    code: null,
+  },
+];
 
 function Projects() {
   return (
     <section className="projects">
-      <h2>My Projects</h2>
-      <p className="projects-intro">
-        Here are some of the projects I've built while learning and working with
-        modern web technologies.
-      </p>
+      <div className="projects-orb" />
+
+      <div className="projects-header">
+        <div className="page-label">// projects</div>
+        <h2>Things I've Built</h2>
+        <p className="projects-intro">
+          A selection of projects built while learning and working with modern
+          web technologies — from frontend UIs to full-stack MERN apps.
+        </p>
+      </div>
 
       <div className="projects-grid">
-        {/* Project Card 1 */}
-        <div className="project-card">
-          <h3>E-Commerce Website</h3>
-          <p>
-            A responsive course-selling e-commerce frontend built using React,
-            featuring dynamic product listing and smooth navigation.
-          </p>
-          <div className="project-tech">
-            <span>React</span>
-            <span>CSS</span>
-            <span>API</span>
+        {projects.map((p) => (
+          <div className="project-card" key={p.id}>
+            <span className="card-number">{p.id}</span>
+            <h3>{p.title}</h3>
+            <p>{p.desc}</p>
+            <div className="project-tech">
+              {p.tech.map((t) => (
+                <span key={t}>{t}</span>
+              ))}
+            </div>
+            <div className="project-links">
+              {p.live && (
+                <button className="btn-live">
+                  <a href={p.live} target="_blank" rel="noopener noreferrer">
+                    ↗ Live
+                  </a>
+                </button>
+              )}
+              {p.code && (
+                <button>
+                  <a href={p.code} target="_blank" rel="noopener noreferrer">
+                    Code
+                  </a>
+                </button>
+              )}
+              {!p.live && !p.code && (
+                <button disabled style={{ opacity: 0.5, cursor: "default" }}>
+                  Coming Soon
+                </button>
+              )}
+            </div>
           </div>
-          <div className="project-links">
-            <button><a
-      href="https://e-commerce-bd1y.onrender.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-    Live
-    </a></button>
-            <button>Code</button>
-          </div>
-        </div>
-
-        {/* Project Card 2 */}
-        <div className="project-card">
-          <h3>Portfolio Website</h3>
-          <p>
-            A personal portfolio website to showcase my skills, projects, and
-            experience with a modern UI and animations.
-          </p>
-          <div className="project-tech">
-            <span>React</span>
-            <span>Framer Motion</span>
-            <span>CSS</span>
-          </div>
-          <div className="project-links">
-            <button><Link>Live</Link></button>
-            <button>Code</button>
-          </div>
-        </div>
-
-        {/* Project Card 3 */}
-        <div className="project-card">
-          <h3>Hotel Management System</h3>
-          <p>
-            An academic project focused on managing reservations, billing, and
-            customer records using a structured system approach.
-          </p>
-          <div className="project-tech">
-            <span>React</span>
-            <span>MongoDB</span>
-            <span>HTML</span>
-          </div>
-          <div className="project-links">
-            <button>Code</button>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
