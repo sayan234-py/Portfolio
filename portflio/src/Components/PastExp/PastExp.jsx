@@ -6,8 +6,13 @@ import express_logo from "../Assets/express-js.png";
 
 function PastExp() {
   return (
-    <section className="past-exp">
+    <div className="past-exp">
       <div className="content">
+        <div className="exp-meta">
+          <span className="exp-badge">MERN Stack Internship</span>
+          <span className="exp-duration">3 months · 2024</span>
+        </div>
+
         <h4 className="company">
           Anovatech Institute Of Crystalline Technology Pvt. Ltd.
         </h4>
@@ -28,7 +33,7 @@ function PastExp() {
         <img src={react_logo} alt="React.js" />
         <img src={node_logo} alt="Node.js" />
       </div>
-    </section>
+    </div>
   );
 }
 
