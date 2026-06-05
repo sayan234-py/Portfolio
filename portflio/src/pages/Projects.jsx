@@ -27,11 +27,11 @@ const projects = [
   },
   {
     id: "04",
-    title: "MERN Weather App",
+    title: "Weather App",
     desc: "Full-stack weather app with a dark morphic UI, WeatherAPI.com integration, location search, and real-time forecast data.",
     tech: ["MERN", "WeatherAPI", "CSS"],
-    live: null,
-    code: null,
+    live: "https://weather-1-3m7p.onrender.com",
+    code: "https://github.com/sayan234-py/weather",
   },
   {
     id: "05",
